@@ -49,7 +49,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </tool>
     <tool lib="1" name="NOT Gate"/>
-    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </tool>
     <tool lib="1" name="OR Gate">
       <a name="inputs" val="2"/>
     </tool>
@@ -72,47 +74,46 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(290,200)" to="(330,200)"/>
     <wire from="(400,220)" to="(400,340)"/>
     <wire from="(380,180)" to="(450,180)"/>
-    <comp lib="5" loc="(560,200)" name="LED">
-      <a name="label" val="ALARM"/>
-    </comp>
-    <comp lib="0" loc="(90,340)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="S"/>
-    </comp>
     <comp lib="6" loc="(211,211)" name="Text">
       <a name="text" val="OR 1: D OR M"/>
-    </comp>
-    <comp lib="1" loc="(250,160)" name="OR Gate">
-      <a name="inputs" val="2"/>
-      <a name="label" val="OR"/>
-    </comp>
-    <comp lib="6" loc="(463,244)" name="Text">
-      <a name="text" val="OR 2: AND OR S"/>
-    </comp>
-    <comp lib="0" loc="(90,200)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="M"/>
-    </comp>
-    <comp lib="6" loc="(242,387)" name="Text">
-      <a name="text" val="ALARM = S PR [ A AND (D OR M) ]"/>
-    </comp>
-    <comp lib="1" loc="(380,180)" name="AND Gate">
-      <a name="inputs" val="2"/>
-      <a name="label" val="AND"/>
     </comp>
     <comp lib="0" loc="(90,140)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="D"/>
     </comp>
+    <comp lib="0" loc="(560,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="output"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(242,387)" name="Text">
+      <a name="text" val="ALARM = S PR [ A AND (D OR M) ]"/>
+    </comp>
+    <comp lib="0" loc="(90,200)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="M"/>
+    </comp>
+    <comp lib="6" loc="(463,244)" name="Text">
+      <a name="text" val="OR 2: AND OR S"/>
+    </comp>
+    <comp lib="1" loc="(380,180)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
     <comp lib="0" loc="(90,270)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="A"/>
     </comp>
+    <comp lib="1" loc="(250,160)" name="OR Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="OR"/>
+    </comp>
     <comp lib="1" loc="(500,200)" name="OR Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="6" loc="(567,230)" name="Text">
-      <a name="text" val="OUTPUT LED"/>
+    <comp lib="0" loc="(90,340)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="S"/>
     </comp>
     <comp lib="6" loc="(351,146)" name="Text">
       <a name="text" val="AND: A AND (D OR M)"/>
